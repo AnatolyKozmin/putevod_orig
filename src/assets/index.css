@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'GothamThin';
+    src: url('@/assets/logo/fonts/gotham_book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Days Sans';
+    src: url('@/assets/logo/fonts/Days_sans_black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family: 'GothamThin', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+
+    background: #161715 !important;
+    color: var(--tg-theme-text-color, black);
+}
+
+/* Фиксируем экран и убираем прокрутку в веб-режиме */
+html, body, #app {
+    height: 100%;
+    overflow: hidden;
+}
+
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+pre {
+    overflow: auto;
+}

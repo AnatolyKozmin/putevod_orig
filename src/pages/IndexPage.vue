@@ -16,9 +16,6 @@ const nonIndexRoutes = computed(() => routes.filter((r) => !!r.meta?.title));
     <ul class="index-page__links">
       <li v-for="route in nonIndexRoutes" :key="route.name" class="index-page__link-item">
         <AppLink class="index-page__link" :to="{ name: route.name }">
-          <i v-if="route.meta?.icon" class="index-page__link-icon">
-            <component :is="route.meta.icon" />
-          </i>
           {{ route.meta!.title }}
         </AppLink>
       </li>

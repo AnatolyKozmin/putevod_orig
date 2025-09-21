@@ -107,10 +107,9 @@ const goLeftPage = () => router.push({ name: 'left-page' })
 .footer {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   width: 100%;
-  max-width: 390px;
   height: clamp(56px, 18.5vw, 72px); /* адаптивная высота, 72px при ширине 390 */
   padding: 0 clamp(12px, 5vw, 20px);
   display: flex;
@@ -119,7 +118,7 @@ const goLeftPage = () => router.push({ name: 'left-page' })
   align-items: center;
   background-color: #8AA8FF;
   z-index: 10;
-  border-radius: 20px 20px 0 0;
+  border-radius: 0 20px 0 0;
 }
 
 .btn {

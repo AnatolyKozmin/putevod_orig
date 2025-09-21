@@ -5,9 +5,6 @@
       <img :src="longArrowIcon" alt="Длинная стрелка" class="page-arrow" />
     </div>
     <div class="content">
-
-
-
       <!-- Горизонтальный скролл с секциями -->
       <div class="sections-scroller">
         <button class="section-card">Об университете</button>
@@ -18,6 +15,11 @@
         <button class="section-card">Мероприятия</button>
         <button class="section-card">Инфраструктура</button>
         <button class="section-card">FAQ</button>
+      </div>
+
+      <!-- Центральная картинка -->
+      <div class="center-image">
+        <img :src="centerImage" alt="Центральное изображение" class="center-img" />
       </div>
 
     </div>
@@ -43,6 +45,7 @@ import menuIcon from '@/assets/logo/menu.svg'
 import putevodIcon from '@/assets/logo/logo_putevod.svg'
 import ikIcon from '@/assets/logo/logo_ik.svg'
 import longArrowIcon from '@/assets/logo/long_strelka.svg'
+import centerImage from '@/assets/pages/university/first.svg.svg'
 
 const router = useRouter()
 const goHome = () => router.push({ name: 'main-menu' })
@@ -96,6 +99,25 @@ const goHome = () => router.push({ name: 'main-menu' })
   height: clamp(16px, 4.5vw, 24px);
   width: auto;
   display: block;
+}
+
+/* Центральная картинка */
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.center-img {
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Горизонтальный скролл */
@@ -168,10 +190,9 @@ const goHome = () => router.push({ name: 'main-menu' })
 .footer {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   width: 100%;
-  max-width: 390px;
   height: clamp(56px, 18.5vw, 72px); /* адаптивная высота, 72px при ширине 390 */
   padding: 0 clamp(12px, 5vw, 20px);
   display: flex;
@@ -180,7 +201,7 @@ const goHome = () => router.push({ name: 'main-menu' })
   align-items: center;
   background-color: #8AA8FF;
   z-index: 10;
-  border-radius: 20px 20px 0 0;
+  border-radius: 0 20px 0 0;
 }
 
 .btn {

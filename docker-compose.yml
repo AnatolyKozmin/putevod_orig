@@ -5,7 +5,7 @@ services:
     image: putevod-ik:web
     container_name: putevod-ik-web
     ports:
-      - "3000:80"  # Меняем на 3000:80 чтобы не конфликтовать с Nginx на хосте
+      - "3000:80"  
     restart: unless-stopped
     networks:
       - putevod-network
